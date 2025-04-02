@@ -249,6 +249,18 @@ nav, section {
     transition: all 0.5s ease-in-out;
 }
 
+.ratings span{
+    color: orange;
+}
+
+.rating {
+    margin-left: 16px;
+}
+
+.ratings {
+    margin-bottom: 8px;
+}
+
 .collection-btn a, .collection-btn .arrow {
     background-color: transparent;
     color: var(--color-btn-bg);
@@ -343,7 +355,7 @@ footer {
 @media screen and (max-width: calc(575.9/16 * 1rem)) {
     .btn-primary {
         font-weight: 500;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
 
     .hidden {
@@ -477,6 +489,11 @@ footer {
 /* Media Queries width < 992px */
 
 @media screen and (min-width: calc(576/16 * 1rem)) and (max-width: calc(991.9/16 * 1rem)) {
+
+    .btn-primary {
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
 
     .hidden {
         display: none;
