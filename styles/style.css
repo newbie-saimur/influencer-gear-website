@@ -112,6 +112,7 @@ nav, section {
 
 .hero-image {
     position: relative;
+    margin-bottom: 70px;
 }
 
 .hero-image-circle {
@@ -124,6 +125,32 @@ nav, section {
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+/* Sponsor Section Design */
+
+.sponsor{
+    margin-bottom: 100px;
+}
+
+.sponsor hr {
+    border: 1px solid transparent;
+    border-image-source: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, 
+                        rgba(192, 204, 218, 0.6) 50%,
+                        rgba(192, 204, 218, 0.1) 100%);
+    border-image-slice: 1;
+}
+
+.sponsor-logos {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding: 36px 0;
+    width: calc(100% - 66px);
+    margin: 0 auto;
+}
+
+.sponsor-logos img {
+    height: calc(30/16 * 1rem);
 }
 
 
@@ -161,10 +188,14 @@ nav, section {
     }
 
     .hero-image {
-        margin-top: -100px;
-        margin-bottom: -100px;
+        margin-top: -30%;
+        margin-bottom: -25%;
     }
 
+    .hero-content {
+        margin-bottom: 0px;
+    }
+    
     .hero-title {
         font-size: calc(28/16 * 1rem);
         line-height: 40px;
@@ -177,6 +208,33 @@ nav, section {
         line-height: auto;
         margin-bottom: 20px;
     }
+
+    .hidden {
+        display: none;
+    }
+
+    .sponsor-logos {
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+        width: calc(100% - 80px);
+    }
+
+    .sponsor-logos img {
+        max-width: calc(65/16 * 1rem);
+    }
+
+    #second-row-sponsor {
+        grid-column-start: 2;
+    }
+
+    .second-row {
+        margin-left: -80%;
+    }
+    
+    /* .sponsor-logos:nth-child(5), .sponsor-logos:nth-child(6), .sponsor-logos:nth-child(7) {
+        display: none;
+    } */
+
 }
 
 /* Media Queries width < 992px */
@@ -200,14 +258,25 @@ nav, section {
         transform: scale(0.8);
     }
 
+    .hero-content {
+        margin-bottom: 50px;
+    }
+
     .hero-image {
-        margin-top: -70px;
-        margin-bottom: -40px;
+        margin-top: -10%;
+        margin-bottom: -5%;
     }
 
     .hero-title {
         font-size: calc(42/16 * 1rem);
         line-height: 60px;
+    }
+
+    .sponsor-logos {
+        gap: 30px;
+        padding: 0;
+        width: calc(100% - 80px);
+        margin: 30px auto;
     }
 
 }
