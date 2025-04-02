@@ -163,7 +163,71 @@ nav, section {
 
 /* Collection Section Design */
 
+.collection-section {
+    max-width: calc(1050/16 * 1rem);
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
 
+.collection-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: calc(28/16 * 1rem);
+    font-weight: 600;
+}
+
+.collection-card {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+.collection-card img {
+    height: 256px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: calc(28/16 * 1rem);
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--color-secondary);
+    margin-bottom: 6px;
+}
+
+.card-price {
+    font-size: calc(24/16 * 1rem);
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color-footer-bg);
+}
+
+.card-description {
+    font-size: calc(14/16 * 1rem);
+    font-weight: 500;
+    line-height: 143%;
+    letter-spacing: 1.8%;
+    color: var(--color-secondary-light);
+    margin-bottom: 3px;
+}
+
+.collection-btn {
+    text-align: end;
+    margin-top: 30px;
+}
+
+.collection-btn a, .collection-btn .arrow {
+    background-color: transparent;
+    color: var(--color-btn-bg);
+    margin-left: 0px;
+}
 
 /* Featured Section Design */
 
@@ -318,6 +382,27 @@ footer {
         margin-left: -80%;
     }
     
+    .collection-cards{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+
+    .card-title {
+        font-size: calc(26/16 * 1rem);
+    }
+    
+    .card-price {
+        font-size: calc(22/16 * 1rem);
+    }
+    
+    .card-description {
+        font-size: calc(12/16 * 1rem);
+    }
+
+    .collection-section {
+        margin-bottom: 40px;
+    }
+
     .featured-section {
         flex-direction: column-reverse;
         text-align: center;
@@ -366,6 +451,11 @@ footer {
 /* Media Queries width < 992px */
 
 @media screen and (min-width: calc(576/16 * 1rem)) and (max-width: calc(991.9/16 * 1rem)) {
+
+    .hidden {
+        display: none;
+    }
+
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -399,7 +489,7 @@ footer {
     }
 
     .sponsor {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .sponsor-logos {
@@ -409,6 +499,20 @@ footer {
         margin: 30px auto;
     }
     
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .collection-cards {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .collection-section {
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+
     .feature-description, .hero-description {
         font-size: calc(15/16 * 1rem);
         line-height: 28px;
