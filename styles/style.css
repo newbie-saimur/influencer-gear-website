@@ -210,6 +210,7 @@ nav, section {
 }
 
 .card-description {
+    font-family: var(--inter-font);
     font-size: calc(14/16 * 1rem);
     font-weight: 500;
     line-height: 143%;
@@ -255,7 +256,7 @@ nav, section {
     line-height: 28px;
     font-weight: 600;
     color: var(--color-secondary-light);
-    margin-bottom: 16px;
+    margin-bottom: 30px;
 }
 
 .feature-btn {
